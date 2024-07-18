@@ -8,6 +8,7 @@ import NavBar from './layout/NavBar'
 import TopBar from './layout/TopBar'
 //componentes here
 import Home from './components/Home'
+import Bikes from './components/Bikes'
 
 
 
@@ -21,8 +22,8 @@ function App() {
       <Routes>
 
         <Route path='/' element={<Home />} />
-        {/* <Route path='/bikes' element={<NewBike />} />
-        <Route path='/bikes/new' element={<NewBike />} />
+        <Route path='/bikes' element={<Bikes />} />
+        {/* <Route path='/bikes/new' element={<NewBike />} />
         <Route path='/bikes/:idx' element={<ShowBike />} />
         <Route path='/bikes/:idx/edit' element={<EditBike />} />
         <Route path='/usedBikes' element={<UsedBikes />} /> */}

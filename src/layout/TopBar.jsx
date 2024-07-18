@@ -1,11 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import '../styles/TopBar.css'
+
+//import img or icons
+import shoppingCartIcon from '../assets/shopping_cart.svg'
 
 const TopBar = () => {
   return (
     <div className='topbar__container'>
-      TOPBAR
+      <div className="logo">
+        Logo Here
+      </div>
+      <div className="shopping_cart_icon">
+        <img src={shoppingCartIcon} alt="Logo img" />
+      </div>
+
     </div>
   )
 }

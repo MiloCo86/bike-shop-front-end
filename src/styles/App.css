@@ -1,15 +1,22 @@
-
+:root{
+    --main-color: green;
+    --main-bg-color: white;
+}
 html, body{
+    display: flexbox;
     font-family: "Dosis", sans-serif;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: rgb(225, 233, 238);
+    overflow: hidden;
 }
 
 .main__container{
     display: grid;
+    width: 100%;
+    height: 100vh;
     grid-template-columns: 100px auto;
     grid-template-rows: 100px auto;
     grid-template-areas: 
