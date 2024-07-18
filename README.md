@@ -1,1 +1,6 @@
-# bike-shop-front-end-
+# Bike Shop APP 
+
+## Description
+
+## Authors
+
