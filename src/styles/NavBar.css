@@ -1,0 +1,7 @@
+.navbar__container{
+    grid-area: NavBar;
+    margin: 0;
+    width: 100%;
+    height: 80dvh;
+    border: 1px solid black;
+}

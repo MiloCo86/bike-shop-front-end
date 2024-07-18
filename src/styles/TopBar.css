@@ -1,0 +1,7 @@
+.topbar__container{
+    grid-area: TopBar;
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    border: 1px solid black;
+}

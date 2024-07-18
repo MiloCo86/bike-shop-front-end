@@ -1,0 +1,19 @@
+
+html, body{
+    font-family: "Dosis", sans-serif;
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225, 233, 238);
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+        'TopBar TopBar'
+        'NavBar Routes';
+    margin: 0;
+}
