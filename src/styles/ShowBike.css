@@ -1,0 +1,27 @@
+.bike__container{
+
+    border: 2px solid black;
+    height: 50%;
+    width: 80%;
+    margin: 50px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bike__image-container{
+
+    border: 1px solid blue;
+    height: 80%;
+    width: 100%;
+}
+
+.bike__details{
+    border: 1px solid green;
+    height: 50%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
