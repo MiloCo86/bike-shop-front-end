@@ -12,9 +12,15 @@ const BikeMiniCard = ({bike}) => {
             <div className="miniCard__img">
                 <img src={bike.img_url} alt="" />
             </div>
-            <div>{bike.make}</div>
-            <div>{bike.model}</div>
-            <div className='miniCard__price'>$ {bike.price}</div>
+            <div className="miniCard__details">
+                <div className="miniCard__specs">
+                    <div>{bike.make}</div>
+                    <div className='miniCard__model'>{bike.model}</div>
+                    <div className='miniCard__type'>{bike.bike_type}</div>
+                </div>
+                <div className='miniCard__price'>$ {bike.price}</div>
+            </div>
+            
         </Link>
     </div>
 
