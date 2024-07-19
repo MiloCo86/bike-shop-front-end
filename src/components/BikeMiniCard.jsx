@@ -9,13 +9,15 @@ const BikeMiniCard = ({bike}) => {
   return (
     <div className='miniCard__Container'>
         <Link to={`/bikes/${bike.id}`} className='miniCard__summary'>
-            <img src={bike.img_url} alt="" />
+            <div className="miniCard__img">
+                <img src={bike.img_url} alt="" />
+            </div>
             <div>{bike.make}</div>
             <div>{bike.model}</div>
-            <div>$ {bike.price}</div>
+            <div className='miniCard__price'>$ {bike.price}</div>
         </Link>
-
     </div>
+
   )
 }
 
