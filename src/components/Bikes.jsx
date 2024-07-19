@@ -37,7 +37,7 @@ const Bikes = () => {
                         <div key={idx}>
                             <BikeMiniCard bike={newBike} />
                         </div>
-                )
+                    )
                 })
         }
             </div>
