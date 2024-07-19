@@ -1,10 +1,16 @@
 .miniCard__Container{
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     display: grid;
     background-color: white; 
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: box-shadow 1s;
+}
+.miniCard__Container:hover{
+    -webkit-box-shadow:0px 0px 10px 4px rgba(46,98,255,0.82);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(46,98,255,0.82);
+    box-shadow: 0px 0px 10px 4px rgba(46,98,255,0.82);
 }
 
 .miniCard__summary{
@@ -17,17 +23,33 @@
         width: 80px;
     }
 }
+.miniCard__details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
 .miniCard__img{
-    width: 130px;
-    height: 100px;
+    width: 230px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     img{
-        width: 80px;
+        width: 200px;
     }
 }
-.miniCard__price{
-    font-size: 20px;
+.miniCard__model{
+    font-weight: 700;
 }
+.miniCard__type{
+    font-style: italic;
+    color: darkgray;
+}
+.miniCard__price{
+    font-size: 25px;
+    color: var(--main-color);
+}
+

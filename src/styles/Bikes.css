@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 50px auto;
     padding: 20px;
-    row-gap: 10px;
 }
 
 .newBikes__topBar{
@@ -12,13 +11,44 @@
     padding-right: 20px;
     padding-left: 20px;
 }
+
+.newBikes__title{
+    font-size: 30px;
+}
+
 .newBikes__cardContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 160px);
+    height: 800px;
+    padding-top: 10px;
+    padding-left: 10px;
+    grid-template-columns: repeat(auto-fill, 250px);
     grid-auto-flow: row;
-    img{
-        width: 80px;
-    }
+    gap: 10px;
+    overflow: scroll;
 }
+.newBikes__cardContainer::-webkit-scrollbar {
+    width: 10px;
+}
+.newBikes__cardContainer::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+}
+
+.newBikes__cardContainer::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--main-color);
+}
+
+
+.newBikes__sort{
+    height: 40px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 
