@@ -8,10 +8,7 @@ import '../styles/NavBar.css'
 import bikeIcon from '../assets/pedal_bike_75dp_bikeIcon.svg' //bike icon
 import aboutIcon from '../assets/info_75dp_aboutIcon.svg' //about icon
 
-
-
-
-
+//navbar component
 const NavBar = () => {
   return (
     <nav className='navbar__container'>
