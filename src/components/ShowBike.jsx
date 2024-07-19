@@ -40,6 +40,7 @@ const ShowBike = () => {
       .catch(err => console.errer(err))
   }, []);
 
+
   return (
     
     <div className="bike__container">
