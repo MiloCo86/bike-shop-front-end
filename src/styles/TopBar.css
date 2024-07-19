@@ -1,13 +1,31 @@
-.topbar__container{
+.topbar__container {
     grid-area: TopBar;
     margin: 0;
     width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    height: 100px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content:space-between;
+    align-items: baseline;
+    overflow: hidden;
+    /* background-color: white; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgb(27,32,90);
+    background: linear-gradient(90deg, rgba(27,32,90,1) 54%, rgba(55,181,253,1) 100%);
 }
-.logo{
+
+.logo {
     color: var(--main-color);
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    max-height: 110px; /* Adjust as needed */
+    margin-left: 40px;
+    align-self: center;
+}
+
+.shopping_cart_icon{
+    margin-right: 30px;
+    align-self: center;
 }
