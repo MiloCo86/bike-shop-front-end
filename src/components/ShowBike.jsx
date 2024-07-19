@@ -14,15 +14,7 @@ const ShowBike = () => {
 
   // useEffect
 
-  useEffect(() ={
-    fetch(API)
-      .then(res => res.json())
-      .then(res => {
-        setUsedBikes(res)
-      })
-      .catch(err => console.errer(err))
-  }, []);
-
+  
   return (
     <div className='showBike__container'>
       
