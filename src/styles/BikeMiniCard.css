@@ -1,0 +1,18 @@
+.miniCard__Container{
+    width: 150px;
+    height: 200px;
+    display: grid;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.miniCard__summary{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    img{
+        width: 80px;
+    }
+}

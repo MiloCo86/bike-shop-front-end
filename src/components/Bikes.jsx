@@ -2,6 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+//components
+import BikeMiniCard from './BikeMiniCard'
+
 import '../styles/Bikes.css'
 
 const Bikes = () => {
@@ -32,12 +35,7 @@ const Bikes = () => {
                 { newBikes.map((newBike, idx) =>{
                     return (
                         <div key={idx}>
-                            <Link className='bike_card' to={`/bikes/${idx}`}>
-                                <img src={newBike.img_url} alt="" />
-                                <div>{newBike.make}</div>
-                                <div>{newBike.model}</div>
-                                <div>$ {newBike.price}</div>
-                            </Link>
+                            <BikeMiniCard bike={newBike} />
                         </div>
                 )
                 })
