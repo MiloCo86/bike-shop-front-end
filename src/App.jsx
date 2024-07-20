@@ -11,6 +11,7 @@ import Home from './components/Home'
 import Bikes from './components/Bikes'
 import AddBike from './components/AddBike'
 import ShowBike from './components/ShowBike'
+import EditBike from './components/EditBike'
 
 
 
@@ -25,11 +26,12 @@ function App() {
 
         <Route path='/' element={<Home />} />
         <Route path='/bikes' element={<Bikes />} />
+        <Route path='/bikes/new' element={<Bikes evaluator={'new'}/>} />
+        <Route path='/bikes/used' element={<Bikes evaluator={'false'}/>} />
         <Route path='/bikes/add' element={<AddBike />} />
         <Route path='/bikes/:idx' element={<ShowBike />} />
-        {/* <Route path='/bikes/:idx/edit' element={<EditBike />} />
-        <Route path='/usedBikes' element={<UsedBikes />} /> */}
-
+        <Route path='/bikes/:idx/edit' element={<EditBike />} />
+  
       </Routes>
     </div>
   )
