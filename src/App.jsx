@@ -25,6 +25,8 @@ function App() {
 
         <Route path='/' element={<Home />} />
         <Route path='/bikes' element={<Bikes />} />
+        <Route path='/bikes/new' element={<Bikes evaluator={'new'}/>} />
+        <Route path='/bikes/used' element={<Bikes evaluator={'false'}/>} />
         <Route path='/bikes/add' element={<AddBike />} />
         <Route path='/bikes/:idx' element={<ShowBike />} />
         {/* <Route path='/bikes/:idx/edit' element={<EditBike />} />

@@ -7,13 +7,21 @@ import BikeMiniCard from './BikeMiniCard'
 
 import '../styles/Bikes.css'
 
-const Bikes = () => {
+const Bikes = ({evaluator}) => {
+
     
     const [newBikes, setNewBikes] = useState([])
     const API = import.meta.env.VITE_BASE_URL
+    
   
     useEffect(()=>{
-        fetch(API)
+        let url = API
+        if(evaluator=='new'){
+            url= API + '/new'
+        }else if(evaluator=='used'){
+            url= API + '/new'
+        }
+        fetch(url)
             .then(res => res.json())
             .then(res => {
                 setNewBikes(res)
