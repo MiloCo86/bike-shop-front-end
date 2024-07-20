@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 //components
 import BikeMiniCard from './BikeMiniCard'
 
+//img and icons
+
+import addIcon from '../assets/add_new_icon.svg'
+
 import '../styles/Bikes.css'
 
 const Bikes = ({evaluator}) => {
@@ -12,14 +16,17 @@ const Bikes = ({evaluator}) => {
     
     const [newBikes, setNewBikes] = useState([])
     const API = import.meta.env.VITE_BASE_URL
+    const [title, setTitle] = useState('Bikes!')
     
   
     useEffect(()=>{
         let url = API
         if(evaluator=='new'){
             url= API + '/new'
+            setTitle('New Bikes!')
         }else if(evaluator=='used'){
             url= API + '/new'
+            setTitle('Used Bikes!')
         }
         fetch(url)
             .then(res => res.json())
@@ -28,6 +35,8 @@ const Bikes = ({evaluator}) => {
             })
             .catch(err => console.error(err))
     },[])
+
+    
 
     const handleSort = (e)=>{
         const sortBikes = [...newBikes]
@@ -60,7 +69,7 @@ const Bikes = ({evaluator}) => {
         <div className='newBikes__container'>
             <div className="newBikes__topBar">
                 <div className="newBikes__title">
-                    New Bikes!
+                    {title}
                 </div>
                 
                 <div className="newBikes__sortMenu_area">
@@ -72,6 +81,11 @@ const Bikes = ({evaluator}) => {
                     <option value="type">Type </option>
                     </select>
                 </div>
+                <Link to={'/bikes/add'} className="newBikes__addBike">
+                    <img src={addIcon} alt="" />
+                    <p className='newBikes__addNewBike-text'>Add <br />New Bike</p>
+                </Link>
+
             </div>
             <div className="newBikes__cardContainer">
                 { newBikes.map((newBike, idx) =>{

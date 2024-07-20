@@ -16,6 +16,11 @@
     font-size: 30px;
 }
 
+.newBikes__addBike{
+    display: flex;
+}
+
+
 .newBikes__cardContainer{
     display: grid;
     height: 800px;
@@ -39,7 +44,6 @@
     border-radius: 8px;
     background-color: var(--main-color);
 }
-
 
 .newBikes__sort{
     height: 40px;
