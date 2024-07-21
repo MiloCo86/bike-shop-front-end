@@ -1,3 +1,4 @@
 .home__container {
-    background-color: var( --main-bg-color);
+    background-image: url("https://pedalshift.net/wp-content/uploads/2024/04/pedalshift-361-science-of-cycling.jpeg");
+    opacity: 0.25;
 }
