@@ -48,6 +48,10 @@
     border-bottom-color: #0e3c83;
 }
 
+.addBike_checkBox{
+    width: 20px;
+}
+
 .addBike__label{
     color: #0d507c;
 }

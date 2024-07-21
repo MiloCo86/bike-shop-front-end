@@ -31,7 +31,10 @@ const AddBike = () => {
   }
 
   const handleCheckBox = (e)=>{
-
+    setBookmark((prevState) => {
+      const isNew = !bookmark.is_new
+      return { ...prevState, is_new: isNew }
+  })
   }
 
 
@@ -139,7 +142,7 @@ const AddBike = () => {
 
         <div className="addBike__fields">
           <input 
-            className='addBike__input'
+            className='addBike__input addBike_checkBox'
             type="checkbox"
             name="is_new"
             value={newBike.is_new}

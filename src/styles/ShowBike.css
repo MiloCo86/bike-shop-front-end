@@ -1,27 +1,74 @@
 .bike__container{
-
-    border: 2px solid black;
-    height: 50%;
-    width: 80%;
-    margin: 50px 0px 0px 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+.bike__cardContainer{
+    width: 800px;
+    height: min-content;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 25px min-content min-content;
+    justify-items: center;
+    justify-content: center;
+}
+
+.bike__closeIcon{
+    position: relative;
+    width: 25px;
+    left: 385px;
+    margin: 0;
+    padding: 0;
+}
+.bike__closeIcon img{
+    width: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .bike__image-container{
-
-    border: 1px solid blue;
-    height: 80%;
-    width: 100%;
-}
-
-.bike__details{
-    border: 1px solid green;
-    height: 50%;
-    width: 100%;
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: fit-content;
+    width: 600px
 }
+.bike__image-container img{
+    width: 500px;
+}
+
+.bike__details{
+    display: grid;
+    grid-template-columns: 600px;
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+}
+.bike__name{
+    margin: 0;
+}
+.bike__name h2{
+    margin: 0;
+}
+.bike__details h3{
+    justify-self: left;
+    margin: 0;
+    font-style: italic;
+}
+.bike__spectsAndPrice{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.bike__spectsAndPrice p{
+    margin: 0;
+}
+
+.bike__spectsAndPrice span{
+    font-weight: bold;
+    font-style: italic;
+}
+
