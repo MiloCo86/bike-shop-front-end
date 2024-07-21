@@ -33,8 +33,8 @@ function App() {
         <Route path='/bikes/new' element={<Bikes evaluator={'new'}/>} />
         <Route path='/bikes/used' element={<Bikes evaluator={'false'}/>} />
         <Route path='/bikes/add' element={<AddBike />} />
-        <Route path='/bikes/:idx' element={<ShowBike />} />
-        <Route path='/bikes/:idx/edit' element={<EditBike />} />
+        <Route path='/bikes/:id' element={<ShowBike />} />
+        <Route path='/bikes/:id/edit' element={<EditBike />} />
   
       </Routes>
     </div>
