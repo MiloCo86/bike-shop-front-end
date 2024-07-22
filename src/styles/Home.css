@@ -1,0 +1,57 @@
+.home__main {
+
+    /* background-color:   linear-gradient(180deg, rgba(0,0,0,0.5), rgba(27,32,90,1)); */
+    background-image: url("https://pedalshift.net/wp-content/uploads/2024/04/pedalshift-361-science-of-cycling.jpeg");
+    opacity: 0.25;
+    display: flex;
+}
+
+.home__container {
+    /* background-color: purple; */
+    height: 100%;
+    width: 75%;
+}
+
+.home__sidebar {
+    background-color: white;
+    height: 100%;
+    width: 25%;
+    /* overflow: scroll; */
+}
+
+.home__main-content {
+    border: 2px solid black;
+    height: 40%;
+    width: 80%;
+    background-color: white;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.home__testimonials {
+    height: 55%;
+    width: 80%;
+    background-color: white;
+    margin-left: 80px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.home__testimonial-box-1 {
+    border: 2px solid black;
+    height: 95%;
+    width: 33%;
+}
+
+.home__autoscroll-display {
+    border: 3px solid black;
+    width: 250px;
+    height: 765px;
+    margin: auto auto;
+    /* display: flex; */
+    /* justify-items: center;
+    justify-content:space-around; */
+    overflow: auto;
+    /* max-height: 100%; */
+    /* flex-direction: column-reverse; */
+}
