@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         </div>
         <div className="home__sidebar">
-          Sidebar
+          <p>Sidebar animation that scrolls through bikeminicards</p>
       </div>
     </div>
   )
