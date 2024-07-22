@@ -68,10 +68,7 @@ const Bikes = ({evaluator}) => {
     return (
         <div className='newBikes__container'>
             <div className="newBikes__topBar">
-                <div className="newBikes__title">
-                    {title}
-                </div>
-                
+                                
                 <div className="newBikes__sortMenu_area">
                     <select className='newBikes__sort' name="sort" id="sort" onChange={handleSort}>
                     <option value="" hidden></option>
@@ -81,6 +78,11 @@ const Bikes = ({evaluator}) => {
                     <option value="type">Type </option>
                     </select>
                 </div>
+
+                <div className="newBikes__title">
+                    {title}
+                </div>
+                
                 <Link to={'/bikes/add'} className="newBikes__addBike">
                     <img src={addIcon} alt="" />
                     <p className='newBikes__addNewBike-text'>Add <br />New Bike</p>

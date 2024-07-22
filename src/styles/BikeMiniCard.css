@@ -2,11 +2,15 @@
     width: 250px;
     height: 250px;
     display: grid;
-    background-color: white; 
+    background: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     transition: box-shadow 1s;
 }
+.miniCard__Used_gradient{
+    background: linear-gradient(135deg, rgba(255,255,255,1) 87%, rgba(249,188,43,1) 95%);
+}
+
 .miniCard__Container:hover{
     -webkit-box-shadow:0px 0px 10px 4px rgba(46,98,255,0.82);
     -moz-box-shadow: 0px 0px 10px 4px rgba(46,98,255,0.82);
@@ -51,5 +55,12 @@
 .miniCard__price{
     font-size: 25px;
     color: var(--main-color);
+}
+.miniCard__new{
+    position: relative;
+    left: 100px;
+    transform: rotate(-45deg);
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 2px rgba(246,101,11,0.6);
 }
 
