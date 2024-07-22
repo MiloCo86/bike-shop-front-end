@@ -18,7 +18,7 @@ const AddBike = () => {
     bike_type: "",
     frame: "",
     bike_weight: "",
-    is_new: true,
+    is_new: false,
     in_stock: 0,
     img_url: ""
   })
@@ -31,8 +31,8 @@ const AddBike = () => {
   }
 
   const handleCheckBox = (e)=>{
-    setBookmark((prevState) => {
-      const isNew = !bookmark.is_new
+    setNewBike((prevState) => {
+      const isNew = !newBike.is_new
       return { ...prevState, is_new: isNew }
   })
   }
@@ -50,7 +50,6 @@ const AddBike = () => {
     })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
             navigate('/bikes')
         })
         .catch(err=>console.log(err))
@@ -132,12 +131,12 @@ const AddBike = () => {
         <div className="addBike__fields">
           <input 
             className='addBike__input'
-            type="text"
-            name="weight"
+            type="number"
+            name="bike_weight"
             value={newBike.bike_weight}
             onChange={handleChange} 
           />
-          <label className='addBike__label' htmlFor="weight">Weight:</label>
+          <label className='addBike__label' htmlFor="bike_weight">Weight:</label>
         </div>
 
         <div className="addBike__fields">

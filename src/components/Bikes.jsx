@@ -25,7 +25,7 @@ const Bikes = ({evaluator}) => {
             url= API + '/new'
             setTitle('New Bikes!')
         }else if(evaluator=='used'){
-            url= API + '/new'
+            url= API + '/used'
             setTitle('Used Bikes!')
         }
         fetch(url)
