@@ -13,15 +13,16 @@ const AddBike = () => {
   const [newBike, setNewBike] = useState({
     make: "",
     model: "",
-    year: "",
+    year: 0,
     price: 0,
     bike_type: "",
     frame: "",
-    bike_weight: "",
+    bike_weight: 0,
     is_new: false,
     in_stock: 0,
     img_url: ""
   })
+
   const API = import.meta.env.VITE_BASE_URL
 
   const handleChange = (e) => {
@@ -37,20 +38,34 @@ const AddBike = () => {
   })
   }
 
+  const formatBike = (bike) =>{
+    bike.year = Number(bike.year)
+    bike.bike_type = Number(bike.bike_type)
+    bike.bike_weight = Number(bike.bike_weight)
+    bike.in_stock = Number(bike.in_stock)
+
+    return bike
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     
+    const formatedBike = formatBike(newBike)
     fetch(API,{
         method:"POST",
-        body: JSON.stringify(newBike),
+        body: JSON.stringify(formatedBike),
         headers: {
             "Content-Type": "application/json"
         }
     })
         .then(res => res.json())
         .then(res => {
+          if(res.error){
+            alert(res.error)
+          }else{
             navigate('/bikes')
+          }    
         })
         .catch(err=>console.log(err))
   }
@@ -180,7 +195,6 @@ const AddBike = () => {
           />
           <label className='addBike__label' htmlFor="img_url">Img Url:</label>
         </div>
-
 
         <button className='addBike__submitBTN'>Submit</button>
       </form>
