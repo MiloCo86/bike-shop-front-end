@@ -5,9 +5,12 @@ import '../styles/BikeMiniCard.css'
 
 const BikeMiniCard = ({bike}) => {
 
+    const isNew = bike.is_new ? '':"Used"
+    
+    const containerClass = `miniCard__Container miniCard__${isNew}_gradient`
 
   return (
-    <div className='miniCard__Container'>
+    <div className={containerClass}>
         <Link to={`/bikes/${bike.id}`} className='miniCard__summary'>
             <div className="miniCard__img">
                 <img src={bike.img_url} alt="" />
@@ -20,6 +23,7 @@ const BikeMiniCard = ({bike}) => {
                 </div>
                 <div className='miniCard__price'>$ {bike.price}</div>
             </div>
+            <div className="miniCard__new">{isNew}</div>
             
         </Link>
     </div>

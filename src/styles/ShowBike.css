@@ -48,6 +48,7 @@
 }
 .bike__name{
     margin: 0;
+    margin-top: 20px;
 }
 .bike__name h2{
     margin: 0;
@@ -63,12 +64,34 @@
     width: 100%;
     margin-bottom: 20px;
 }
-.bike__spectsAndPrice p{
+.bike__spects p{
     margin: 0;
 }
 
-.bike__spectsAndPrice span{
+.bike__spects span{
     font-weight: bold;
     font-style: italic;
 }
+.bike__price{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.bike__price h4{
+    margin: 0;
+    align-self: center;
+}
+.bike__add-to-cart{
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: #0d507c;
+    color: white;
+    border-radius: 25px;
+    place-self: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
 

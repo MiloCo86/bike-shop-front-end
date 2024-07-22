@@ -56,15 +56,15 @@ const ShowBike = () => {
           </div>
           <h3>Spects</h3>
           <div className="bike__spectsAndPrice">
-            <div className="bike_spects">
+            <div className="bike__spects">
               <p><span>Year:</span> {bike.year}</p>
               <p><span>Type:</span> {bike.bike_type}</p>
               <p><span>Frame:</span> {bike.frame}</p>
               <p><span>Weight:</span> {bike.bike_weight}</p>
             </div>
-            <div className="bike_price">
-              <h4>Price: ${bike.price}</h4>
-              <div className="bike__add-to-cart"><button>Add to Cart</button></div>
+            <div className="bike__price">
+              <h4>Price: <span>${bike.price}</span></h4>
+              <button className="bike__add-to-cart">Add to Cart</button>
             </div>
             
           </div>
