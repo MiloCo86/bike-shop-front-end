@@ -83,7 +83,7 @@ const EditBike = () => {
     <div className='updateBike__container'>
       <h2 className='updateBike__header'>edit bike</h2>
       <form className='updateBike__form' onSubmit={handleSubmit}>
-        <Link className='updateBike__closeIcon' to={'/bikes'} ><img  src={closeIcon} alt="close" /></Link>
+        <Link className='updateBike__closeIcon' to={`/bikes/${id}`} ><img  src={closeIcon} alt="close" /></Link>
         <div className="updateBike__fields">
           <input 
             className='updateBike__input'
