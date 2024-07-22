@@ -13,15 +13,16 @@ const AddBike = () => {
   const [newBike, setNewBike] = useState({
     make: "",
     model: "",
-    year: "",
+    year: 0,
     price: 0,
     bike_type: "",
     frame: "",
-    bike_weight: "",
-    is_new: true,
+    bike_weight: 0,
+    is_new: false,
     in_stock: 0,
     img_url: ""
   })
+
   const API = import.meta.env.VITE_BASE_URL
 
   const handleChange = (e) => {
@@ -31,33 +32,46 @@ const AddBike = () => {
   }
 
   const handleCheckBox = (e)=>{
-    setBookmark((prevState) => {
-      const isNew = !bookmark.is_new
+    setNewBike((prevState) => {
+      const isNew = !newBike.is_new
       return { ...prevState, is_new: isNew }
   })
+  }
+
+  const formatBike = (bike) =>{
+    bike.year = Number(bike.year)
+    bike.bike_type = Number(bike.bike_type)
+    bike.bike_weight = Number(bike.bike_weight)
+    bike.in_stock = Number(bike.in_stock)
+
+    return bike
   }
 
 
   const handleSubmit = (e) => {
     e.preventDefault()
     
+    const formatedBike = formatBike(newBike)
     fetch(API,{
         method:"POST",
-        body: JSON.stringify(newBike),
+        body: JSON.stringify(formatedBike),
         headers: {
             "Content-Type": "application/json"
         }
     })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
+          if(res.error){
+            alert(res.error)
+          }else{
             navigate('/bikes')
+          }    
         })
         .catch(err=>console.log(err))
   }
   return (
     <div className='addBike__container'>
-      <h2>Add new bike</h2>
+      <h2 className='addBike__header'>add new bike</h2>
       <form className='addBike__form' onSubmit={handleSubmit}>
         <Link className='addBike__closeIcon' to={'/bikes'} ><img  src={closeIcon} alt="close" /></Link>
         <div className="addBike__fields">
@@ -65,6 +79,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="make"
+            placeholder='Ex: Canondale'
             value={newBike.make}
             onChange={handleChange}
             required 
@@ -77,6 +92,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="model"
+            placeholder='Ex: Synapse'
             value={newBike.model}
             onChange={handleChange} 
             required
@@ -89,6 +105,7 @@ const AddBike = () => {
             className='addBike__input'
             type="number"
             name="year"
+            placeholder='Enter year'
             value={newBike.year}
             onChange={handleChange} 
           />
@@ -100,6 +117,7 @@ const AddBike = () => {
             className='addBike__input'
             type="number"
             name="price"
+            placeholder='Enter price'
             value={newBike.price}
             onChange={handleChange}
             required
@@ -112,6 +130,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="bike_type"
+            placeholder='Road, Mountain, etc.'
             value={newBike.bike_type}
             onChange={handleChange} 
           />
@@ -123,6 +142,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="frame"
+            placeholder='Aluminum, Carbon, etc.'
             value={newBike.frame}
             onChange={handleChange} 
           />
@@ -132,12 +152,13 @@ const AddBike = () => {
         <div className="addBike__fields">
           <input 
             className='addBike__input'
-            type="text"
-            name="weight"
+            type="number"
+            name="bike_weight"
+            placeholder='Weight in Kg'
             value={newBike.bike_weight}
             onChange={handleChange} 
           />
-          <label className='addBike__label' htmlFor="weight">Weight:</label>
+          <label className='addBike__label' htmlFor="bike_weight">Weight:</label>
         </div>
 
         <div className="addBike__fields">
@@ -168,14 +189,14 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="img_url"
+            placeholder='Enter img url'
             value={newBike.img_url}
             onChange={handleChange} 
           />
           <label className='addBike__label' htmlFor="img_url">Img Url:</label>
         </div>
 
-
-        <button className='addBike__submitBTN'>Add Bike</button>
+        <button className='addBike__submitBTN'>Submit</button>
       </form>
     </div>
   )

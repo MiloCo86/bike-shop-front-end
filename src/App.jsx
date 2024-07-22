@@ -31,7 +31,7 @@ function App() {
         <Route path='/shopcart' element={<ShopCart />} />
         <Route path='/bikes' element={<Bikes />} />
         <Route path='/bikes/new' element={<Bikes evaluator={'new'}/>} />
-        <Route path='/bikes/used' element={<Bikes evaluator={'false'}/>} />
+        <Route path='/bikes/used' element={<Bikes evaluator={'used'}/>} />
         <Route path='/bikes/add' element={<AddBike />} />
         <Route path='/bikes/:id' element={<ShowBike />} />
         <Route path='/bikes/:id/edit' element={<EditBike />} />
