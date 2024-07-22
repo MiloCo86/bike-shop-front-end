@@ -34,7 +34,7 @@ const Bikes = ({evaluator}) => {
                 setNewBikes(res)
             })
             .catch(err => console.error(err))
-    },[])
+    },[evaluator])
 
     
 
