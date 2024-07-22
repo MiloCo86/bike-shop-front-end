@@ -23,10 +23,10 @@ const Bikes = ({evaluator}) => {
         let url = API
         if(evaluator=='new'){
             url= API + '/new'
-            setTitle('New Bikes!')
+            setTitle('New Bikes')
         }else if(evaluator=='used'){
             url= API + '/used'
-            setTitle('Used Bikes!')
+            setTitle('Used Bikes')
         }
         fetch(url)
             .then(res => res.json())
@@ -71,7 +71,7 @@ const Bikes = ({evaluator}) => {
                                 
                 <div className="newBikes__sortMenu_area">
                     <select className='newBikes__sort' name="sort" id="sort" onChange={handleSort}>
-                    <option value="" hidden></option>
+                    <option value="" hidden>Filter by</option>
                     <option value="low">Price (low to high)</option>
                     <option value="high">Price (high to low)</option>
                     <option value="make">Make </option>

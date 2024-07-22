@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 .newBikes__container{
     display: grid;
     grid-template-rows: 50px auto;
@@ -13,11 +17,15 @@
 }
 
 .newBikes__title{
-    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 50px;
 }
 
 .newBikes__addBike{
     display: flex;
+    width: 175px;
 }
 
 
@@ -48,6 +56,7 @@
 .newBikes__sort{
     height: 40px;
     font-family: "Source Sans 3", sans-serif;
+    color: rgba(211, 211, 211, 0.769);
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
