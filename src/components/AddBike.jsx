@@ -64,6 +64,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="make"
+            placeholder='Ex: Canondale'
             value={newBike.make}
             onChange={handleChange}
             required 
@@ -76,6 +77,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="model"
+            placeholder='Ex: Synapse'
             value={newBike.model}
             onChange={handleChange} 
             required
@@ -88,6 +90,7 @@ const AddBike = () => {
             className='addBike__input'
             type="number"
             name="year"
+            placeholder='Enter year'
             value={newBike.year}
             onChange={handleChange} 
           />
@@ -99,6 +102,7 @@ const AddBike = () => {
             className='addBike__input'
             type="number"
             name="price"
+            placeholder='Enter price'
             value={newBike.price}
             onChange={handleChange}
             required
@@ -111,6 +115,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="bike_type"
+            placeholder='Road, Mountain, etc.'
             value={newBike.bike_type}
             onChange={handleChange} 
           />
@@ -122,6 +127,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="frame"
+            placeholder='Aluminum, Carbon, etc.'
             value={newBike.frame}
             onChange={handleChange} 
           />
@@ -133,6 +139,7 @@ const AddBike = () => {
             className='addBike__input'
             type="number"
             name="bike_weight"
+            placeholder='Weight in Kg'
             value={newBike.bike_weight}
             onChange={handleChange} 
           />
@@ -167,6 +174,7 @@ const AddBike = () => {
             className='addBike__input'
             type="text"
             name="img_url"
+            placeholder='Enter img url'
             value={newBike.img_url}
             onChange={handleChange} 
           />

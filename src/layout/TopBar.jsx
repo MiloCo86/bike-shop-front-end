@@ -11,10 +11,16 @@ const TopBar = () => {
   return (
     <div className='topbar__container'>
       <div className="logo">
-      <img src={logo} alt="Logo img" />
+      <Link to="/">
+        <img src={logo} alt="Logo img" />
+      </Link>
+
       </div>
       <div className="shopping_cart_icon">
-        <img src={shoppingCartIcon} alt="Logo img" />
+        <Link to="/shopcart">
+          <img src={shoppingCartIcon} alt="Logo img" />
+        </Link>
+
       </div>
 
     </div>
