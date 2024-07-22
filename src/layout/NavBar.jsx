@@ -14,13 +14,13 @@ const NavBar = () => {
     <nav className='navbar__container'>
       <ul className="navbar__menu">
         <li className="navbar__item">
-          <Link to={'/bikes'} className="navbar__link">
+          <Link to={'/bikes/new'} className="navbar__link">
             <span className="navbar__icon"> <img src={bikeIcon} alt="Logo img" /></span>
             Bikes
           </Link>
         </li>
         <li className="navbar__item">
-          <Link to={'/usedBikes'} className="navbar__link">
+          <Link to={'/bikes/used'} className="navbar__link">
             <span className="navbar__icon"><img src={bikeIcon} alt="Logo img" /></span>
             Used Bikes
           </Link>
