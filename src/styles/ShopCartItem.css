@@ -1,0 +1,42 @@
+.item__container{
+    width: 500px;
+    display: grid;
+    grid-template-columns: 30px 50px 70px 250px 60px 20px;
+    grid-template-rows: 50px;
+    justify-items: start;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.item__container img{
+    width: 50px;
+    margin: 0;
+}
+.item_miniIMG{
+    margin-right: 20px;
+}
+
+.item__container input{
+    width: 25px;
+    margin-right: 25px;
+}
+.item__container label{
+    margin-right: 5px;
+}
+.item__container p{
+    margin: 0;
+}
+.item__name{
+    width: 230px;
+}
+
+.item_delIcon{
+    cursor: pointer;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+
