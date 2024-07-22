@@ -14,7 +14,7 @@ import '../styles/Home.css';
 
 const Home = () => {
 
-  const [bikes, setBikes] = useState([{
+  const [bike, setBike] = useState([{
     id: "",
     make: "",
     model: "",
@@ -34,7 +34,7 @@ const Home = () => {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setBikes(res)
+        setBike(res)
       })
       .catch((err) => console.error(err));
   }, []);
@@ -48,15 +48,17 @@ const Home = () => {
         Main Content
         </div>
         <div className="home__testimonials">
-          <div className="home__testimonial-box-1">Testimonial 1</div>
-          <div className="home__testimonial-box-2">Testimonial 2</div>
-          <div className="home__testimonial-box-3">Testimonial 3</div>
+          <div className="home__testimonial-box">Testimonial 1</div>
+          <div className="home__testimonial-box">Testimonial 2</div>
+          <div className="home__testimonial-box">Testimonial 3</div>
         </div>
         </div>
-        <div className="home__sidebar" >
-         {/* <BikeMiniCard  bike={bikes[0]} />
-         <BikeMiniCard bike={bikes[1]} />
-         <BikeMiniCard bike={bikes[2]} /> */}
+        <div className="home__sidebar">
+          <div className="home__autoscroll-display">
+            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
+            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
+            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
+          </div>
       </div>
     </div>
   )

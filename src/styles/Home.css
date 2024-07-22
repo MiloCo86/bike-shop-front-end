@@ -16,7 +16,7 @@
     background-color: white;
     height: 100%;
     width: 25%;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .home__main-content {
@@ -43,14 +43,15 @@
     width: 33%;
 }
 
-.home__testimonial-box-2 {
-    border: 2px solid black;
-    height: 95%;
-    width: 33%;
-}
-
-.home__testimonial-box-3 {
-    border: 2px solid black;
-    height: 95%;
-    width: 33%;
+.home__autoscroll-display {
+    border: 3px solid black;
+    width: 250px;
+    height: 765px;
+    margin: auto auto;
+    /* display: flex; */
+    /* justify-items: center;
+    justify-content:space-around; */
+    overflow: auto;
+    /* max-height: 100%; */
+    /* flex-direction: column-reverse; */
 }
