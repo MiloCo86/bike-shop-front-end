@@ -5,6 +5,8 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 
 //img and icons
 import closeIcon from '../assets/close_icon.svg'
+import editIcon from '../assets/edit_75dp_.svg'
+import deleteIcon from '../assets/delete_75dp.svg'
 
 //css
 import '../styles/ShowBike.css';
@@ -44,11 +46,29 @@ const ShowBike = () => {
       .catch(err => console.errer(err))
   }, []);
 
+  // hanlde delete request
+
+  const handleDelete = () => {
+    fetch(`${API}/${id}`, {
+      method: 'DELETE',
+    })
+    .then(res => res.json())
+    .then(res => navigate('/bikes'))
+    .catch(err => console.error(err))
+  };
+
 
   return (  
     <div className="bike__container">
       <div className="bike__cardContainer">
+        <div className='bike__edit-delete'> 
+          <Link to={`/bikes/${id}/edit`}> <img src={editIcon}></img> </Link>
+          
+          <img src={deleteIcon} onClick={handleDelete}></img>
+        </div>
+        
         <Link className='bike__closeIcon' to={'/bikes'} ><img  src={closeIcon} alt="close" /></Link>
+        
         <div className="bike__image-container"><img src={bike.img_url}></img></div>
         <div className="bike__details">
           <div className="bike__name">
