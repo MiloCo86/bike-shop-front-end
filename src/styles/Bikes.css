@@ -1,66 +1,85 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-
-.newBikes__container{
+.showBikes__container{
     display: grid;
     grid-template-rows: 50px auto;
     padding: 20px;
 }
 
-.newBikes__topBar{
+.showBikes__topBar{
     display: flex;
     justify-content: space-between;
+    height: 25px;
     align-items: center;
     padding-right: 20px;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
-.newBikes__title{
+.showBikes__title{
     font-family: "Bebas Neue", sans-serif;
     font-weight: bolder;
     font-style: normal;
     font-size: 50px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.newBikes__addBike{
+.showBikes__addBike{
     display: flex;
-    width: 175px;
+    width: 140px;
+    margin: 0;
+    padding: 0;
+}
+
+.showBikes__addBike.hidden {
+    visibility: hidden;
+}
+
+.showBikes__addNewBike-text{
+    font-family: "bebas neue", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 0;
 }
 
 
-.newBikes__cardContainer{
+.showBikes__cardContainer{
     display: grid;
-    height: 800px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 10px;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 275px);
+    grid-template-rows: repeat(auto-fill, 275px);
     grid-auto-flow: row;
-    gap: 10px;
+    gap: 20px;
     overflow: scroll;
 }
-.newBikes__cardContainer::-webkit-scrollbar {
+.showBikes__cardContainer::-webkit-scrollbar {
     width: 10px;
 }
-.newBikes__cardContainer::-webkit-scrollbar-track {
+.showBikes__cardContainer::-webkit-scrollbar-track {
     border-radius: 8px;
     background-color: #e7e7e7;
     border: 1px solid #cacaca;
 }
 
-.newBikes__cardContainer::-webkit-scrollbar-thumb {
+.showBikes__cardContainer::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: var(--main-color);
 }
 
-.newBikes__sort{
-    height: 40px;
+.showBikes__sort{
+    height: 30px;
     font-family: "Source Sans 3", sans-serif;
+    font-size: 18px;
     color: rgba(211, 211, 211, 0.769);
-    font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* .newBikes__sort option{
+    font-size: 6px;
+} */
 
 
 

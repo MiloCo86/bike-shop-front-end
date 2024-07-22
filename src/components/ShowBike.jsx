@@ -49,14 +49,15 @@ const ShowBike = () => {
   // hanlde delete request
 
   const handleDelete = () => {
-    fetch(`${API}/${id}`, {
-      method: 'DELETE',
-    })
-    .then(res => res.json())
-    .then(res => navigate('/bikes'))
-    .catch(err => console.error(err))
+    if(window.confirm('Are you sure you want to delete?')) {
+      fetch(`${API}/${id}`, {
+        method: 'DELETE',
+      })
+        .then(res => res.json())
+        .then(res => navigate('/bikes'))
+        .catch(err => console.error(err))
+   }
   };
-
 
   return (  
     <div className="bike__container">

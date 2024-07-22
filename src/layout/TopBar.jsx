@@ -14,9 +14,13 @@ const TopBar = () => {
       <Link to="/">
         <img src={logo} alt="Logo img" />
       </Link>
+    </div>
 
-      </div>
-      <div className="shopping_cart_icon">
+    <div className='topbar__header'>Sprocket Science
+    
+    </div>
+      
+    <div className="shopping_cart_icon">
         <Link to="/shopcart">
           <img src={shoppingCartIcon} alt="Logo img" />
         </Link>
