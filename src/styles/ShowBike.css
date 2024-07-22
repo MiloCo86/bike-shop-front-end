@@ -22,11 +22,7 @@
     left: 20px;
     display: flex;
     gap: 10px;
-
-}
-
-.bike__edit-delete svg{
-    fill: blue
+    cursor: pointer;
 
 }
 
