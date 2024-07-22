@@ -56,7 +56,7 @@ const AddBike = () => {
   }
   return (
     <div className='addBike__container'>
-      <h2>Add new bike</h2>
+      <h2 className='addBike__header'>add new bike</h2>
       <form className='addBike__form' onSubmit={handleSubmit}>
         <Link className='addBike__closeIcon' to={'/bikes'} ><img  src={closeIcon} alt="close" /></Link>
         <div className="addBike__fields">
@@ -174,7 +174,7 @@ const AddBike = () => {
         </div>
 
 
-        <button className='addBike__submitBTN'>Add Bike</button>
+        <button className='addBike__submitBTN'>Submit</button>
       </form>
     </div>
   )
