@@ -4,6 +4,8 @@ Sprocket Science is a website that makes purchasing a new bike easy.
 
 See all of our inventory in one place. Sort them by price make or type of bike. 
 
+If you don't want to spring for a new bike you can see our vast Used Bike inventory. 
+
 ## Description
 Back-end repo ⌨️
 https://github.com/MiloCo86/bike-shop-back-end
