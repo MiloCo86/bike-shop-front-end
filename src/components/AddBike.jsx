@@ -40,7 +40,7 @@ const AddBike = () => {
 
   const formatBike = (bike) =>{
     bike.year = Number(bike.year)
-    bike.bike_type = Number(bike.bike_type)
+    bike.price = Number(bike.price)
     bike.bike_weight = Number(bike.bike_weight)
     bike.in_stock = Number(bike.in_stock)
 

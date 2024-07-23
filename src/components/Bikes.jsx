@@ -14,24 +14,28 @@ import '../styles/Bikes.css'
 const Bikes = ({evaluator}) => {
 
     
-    const [newBikes, setNewBikes] = useState([])
+    const [showBikes, setShowBikes] = useState([])
     const API = import.meta.env.VITE_BASE_URL
-    const [title, setTitle] = useState('Bikes!')
+    const [title, setTitle] = useState('All Bikes')
     
   
     useEffect(()=>{
         let url = API
+        
         if(evaluator=='new'){
             url= API + '/new'
-            setTitle('New Bikes!')
+            setTitle('New Bikes')
         }else if(evaluator=='used'){
             url= API + '/used'
-            setTitle('Used Bikes!')
+            setTitle('Used Bikes')
+        } else if (evaluator==undefined){
+            url= API
+            setTitle('All Bikes')
         }
         fetch(url)
             .then(res => res.json())
             .then(res => {
-                setNewBikes(res)
+                setShowBikes(res)
             })
             .catch(err => console.error(err))
     },[evaluator])
@@ -39,24 +43,24 @@ const Bikes = ({evaluator}) => {
     
 
     const handleSort = (e)=>{
-        const sortBikes = [...newBikes]
+        const sortBikes = [...showBikes]
     
         switch(e.target.value){
             case "low":
-                setNewBikes(sortBikes.sort((a,b)=>a.price -b.price))
+                setShowBikes(sortBikes.sort((a,b)=>a.price -b.price))
                 break;
             case "high":
-                setNewBikes(sortBikes.sort((a,b)=>b.price -a.price))
+                setShowBikes(sortBikes.sort((a,b)=>b.price -a.price))
                 break;
             case "make":
-                setNewBikes(sortBikes.sort((a,b)=>{
+                setShowBikes(sortBikes.sort((a,b)=>{
                     if(a.make < b.make) { return -1; }
                     if(a.make > b.make) { return 1; }
                     return 0;
                 }))
                 break;
             case "type":
-                setNewBikes(sortBikes.sort((a,b)=>{
+                setShowBikes(sortBikes.sort((a,b)=>{
                     if(a.bike_type < b.bike_type) { return -1; }
                     if(a.bike_type > b.bike_type) { return 1; }
                     return 0;
@@ -66,12 +70,12 @@ const Bikes = ({evaluator}) => {
     }
 
     return (
-        <div className='newBikes__container'>
-            <div className="newBikes__topBar">
+        <div className='showBikes__container'>
+            <div className="showBikes__topBar">
                                 
-                <div className="newBikes__sortMenu_area">
-                    <select className='newBikes__sort' name="sort" id="sort" onChange={handleSort}>
-                    <option value="" hidden></option>
+                <div className="showBikes__sortMenu_area">
+                    <select className='showBikes__sort' name="sort" id="sort" onChange={handleSort}>
+                    <option value="" hidden>Filter by</option>
                     <option value="low">Price (low to high)</option>
                     <option value="high">Price (high to low)</option>
                     <option value="make">Make </option>
@@ -79,18 +83,18 @@ const Bikes = ({evaluator}) => {
                     </select>
                 </div>
 
-                <div className="newBikes__title">
+                <div className="showBikes__title">
                     {title}
                 </div>
                 
-                <Link to={'/bikes/add'} className="newBikes__addBike">
+                <Link to={'/bikes/add'} className={`showBikes__addBike ${evaluator !== undefined ? 'hidden' : ''}`}>
                     <img src={addIcon} alt="" />
-                    <p className='newBikes__addNewBike-text'>Add <br />New Bike</p>
+                    <p className='showBikes__addNewBike-text'>Add <br />New Bike</p>
                 </Link>
 
             </div>
-            <div className="newBikes__cardContainer">
-                { newBikes.map((newBike, idx) =>{
+            <div className="showBikes__cardContainer">
+                {showBikes.map((newBike, idx) =>{
                     return (
                         <div key={idx}>
                             <BikeMiniCard bike={newBike} />
