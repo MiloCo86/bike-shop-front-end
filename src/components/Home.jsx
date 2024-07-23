@@ -45,7 +45,7 @@ const Home = () => {
     <div className='home__main'>
       <div className='home__container'>
         <div className="home__main-content">
-          <img src='/src/assets/istockphoto-825854604-1024x1024.jpg'/>
+          <img src='/src/assets/istockphoto-825854604-1024x1024.jpg' className='home__main-image' />
           <h1>Welcome to Sprocket Science</h1>
           <h2>Buying a bike should be simple</h2>
         <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ut nulla tempus bibendum diam tempor. 
@@ -55,11 +55,11 @@ const Home = () => {
           Molestie molestie magnis eleifend cubilia sapien lobortis. Luctus fames vivamus quam ac lacinia 
           venenatis eu quisque. Metus litora vehicula nulla; quisque a urna ad. Sem sed hendrerit nulla 
           ante mus lobortis. Vulputate condimentum egestas cursus dictum dignissim sollicitudin feugiat ut.</p>
-        </div>
+        </div><h3>Cutsomer Testimonials</h3>
         <div className="home__testimonials">
-          <div className="home__testimonial-box">Testimonial 1</div>
-          <div className="home__testimonial-box">Testimonial 2</div>
-          <div className="home__testimonial-box">Testimonial 3</div>
+          <div className="home__testimonial-box">Lorem ipsum odor amet, consectetuer adipiscing elit. Felis curae massa mus egestas commodo vivamus quam congue. Blandit nisi ante risus diam adipiscing lectus nam. Odio ut odio laoreet eros erat maecenas. Ultricies auctor habitant rhoncus, ornare finibus nascetur porta. Curae consequat natoque feugiat fermentum rutrum. Conubia feugiat urna eget eget nibh ridiculus ligula. Lobortis enim luctus; in sollicitudin neque facilisi. </div>
+          <div className="home__testimonial-box">Lorem ipsum odor amet, consectetuer adipiscing elit. Felis curae massa mus egestas commodo vivamus quam congue. Blandit nisi ante risus diam adipiscing lectus nam. Odio ut odio laoreet eros erat maecenas. Ultricies auctor habitant rhoncus, ornare finibus nascetur porta. Curae consequat natoque feugiat fermentum rutrum. Conubia feugiat urna eget eget nibh ridiculus ligula. Lobortis enim luctus; in sollicitudin neque facilisi. </div>
+          <div className="home__testimonial-box">Lorem ipsum odor amet, consectetuer adipiscing elit. Felis curae massa mus egestas commodo vivamus quam congue. Blandit nisi ante risus diam adipiscing lectus nam. Odio ut odio laoreet eros erat maecenas. Ultricies auctor habitant rhoncus, ornare finibus nascetur porta. Curae consequat natoque feugiat fermentum rutrum. Conubia feugiat urna eget eget nibh ridiculus ligula. Lobortis enim luctus; in sollicitudin neque facilisi. </div>
         </div>
         </div>
         <div className="home__sidebar">
