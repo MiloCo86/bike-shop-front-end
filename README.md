@@ -6,6 +6,10 @@ See all of our inventory in one place. Sort them by price make or type of bike.
 
 If you don't want to spring for a new bike you can see our vast Used Bike inventory. 
 
+Click on a bike and get more details
+
+Edit and update your bike details if you are the site owner
+
 ## Description
 Back-end repo ⌨️
 https://github.com/MiloCo86/bike-shop-back-end
