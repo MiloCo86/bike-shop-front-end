@@ -38,7 +38,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className='navbar__bottom_section'>
+            {/* <div className='navbar__bottom_section'>
               <div className='navbar__about_navigation'>
                 <li className="navbar__item">
                   <Link to={'/about'} className="navbar__link">
@@ -47,7 +47,7 @@ const NavBar = () => {
                   </Link>
                 </li>
               </div>
-            </div>
+            </div> */}
             
           </ul>
     </nav>

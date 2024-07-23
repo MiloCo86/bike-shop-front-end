@@ -10,6 +10,10 @@ import BikeMiniCard from './BikeMiniCard';
 // CSS
 import '../styles/Home.css';
 
+//logo
+import logo from '../assets/sprocket_science_logo.png'
+
+
 // component 
 
 const Home = () => {
@@ -43,24 +47,30 @@ const Home = () => {
 
   return (
     <div className='home__main'>
+     
       <div className='home__container'>
         <div className="home__main-content">
-        Main Content
+            <img className='home__logo' src={logo}></img>
+            <h1 className='home__welcome-header'>Welcome to Sprocket Science!</h1>
+            <h2 className='home__slogan'>Bike mechanics at rocket-level precision</h2>
         </div>
         <div className="home__testimonials">
-          <div className="home__testimonial-box">Testimonial 1</div>
-          <div className="home__testimonial-box">Testimonial 2</div>
-          <div className="home__testimonial-box">Testimonial 3</div>
+          <div className="home__testimonial-box">
+          </div>
+          <div className="home__testimonial-box"></div>
+          <div className="home__testimonial-box"></div>
         </div>
         </div>
         <div className="home__sidebar">
           <div className="home__autoscroll-display">
-            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
-            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
-            <BikeMiniCard bike={bike[Math.floor(Math.random() * bike.length)]} />
+            <BikeMiniCard  className='home__miniBike-card' bike={bike[Math.floor(Math.random() * bike.length)]} /> <br/>
+            <BikeMiniCard className='home__miniBike-card' bike={bike[Math.floor(Math.random() * bike.length)]} /><br/>
+            <BikeMiniCard className='home__miniBike-card'bike={bike[Math.floor(Math.random() * bike.length)]} />
           </div>
       </div>
+
     </div>
+    
   )
 }
 
