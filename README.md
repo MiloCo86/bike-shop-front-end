@@ -1,5 +1,9 @@
 # Sprocket-Science-App 🚲
 
+Sprocket Science is a website that makes purchasing a new bike easy. 
+
+See all of our inventory in one place. Sort them by price make or type of bike. 
+
 ## Description
 Back-end repo ⌨️
 https://github.com/MiloCo86/bike-shop-back-end
