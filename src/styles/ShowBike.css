@@ -29,12 +29,12 @@
 .bike__closeIcon{
     position: relative;
     width: 25px;
-    left: 360px;
+    left: 340px;
     margin-top: 20px;
     padding: 0;
 }
 .bike__closeIcon img{
-    width: 25px;
+    width: 55px;
     margin: 0;
     padding: 0;
 }

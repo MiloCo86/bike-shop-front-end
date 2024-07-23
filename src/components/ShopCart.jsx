@@ -19,6 +19,7 @@ const ShopCart = () => {
   const [shopCartElements, setShopCartElements] = useState([])
   const [sortedElements, setSortedElements] = useState([])
   const [total, setTotal] =useState(0)
+  const [updateCart, setUpdateCar] = useState(false)
   const API = import.meta.env.VITE_SHOPCART_URL
 
   useEffect(()=>{
@@ -35,11 +36,15 @@ const ShopCart = () => {
   useEffect(()=>{
     setTotal(shopCartElements.reduce((accumulator, currentValue) => accumulator + (currentValue.price * currentValue.quantity),
         0,))
-  },[shopCartElements])
+  },[shopCartElements, updateCart])
 
   useEffect(()=>{
     setSortedElements(shopCartElements.sort((a,b)=> a.txn_id - b.txn_id))
-  },[shopCartElements])
+  },[shopCartElements, updateCart])
+
+  const handleUpdate = () =>{
+    setUpdateCar(!updateCart)
+  }
 
   return (
     <div className='shopCart__container'>
