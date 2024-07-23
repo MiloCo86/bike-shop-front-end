@@ -1,14 +1,26 @@
 # Sprocket-Science-App 🚲
 
+![alt text](src/assets/sprocket_science_logo.png)
+
 Sprocket Science is a website that makes purchasing a new bike easy. 
 
 See all of our inventory in one place. Sort them by price make or type of bike. 
 
+![alt text](<src/assets/Screenshot 2024-07-23 at 11.11.49 AM.png>)
+
 If you don't want to spring for a new bike you can see our vast Used Bike inventory. 
+
+![alt text](<src/assets/Screenshot 2024-07-23 at 11.16.53 AM.png>)
 
 Click on a bike and get more details
 
+![alt text](<src/assets/Screenshot 2024-07-23 at 11.18.16 AM.png>)
+
+![alt text](<src/assets/Screenshot 2024-07-23 at 11.19.20 AM.png>)
+
 Edit and update your bike details if you are the site owner
+
+![alt text](<src/assets/Screenshot 2024-07-23 at 11.23.05 AM.png>)
 
 ## Description
 Back-end repo ⌨️
