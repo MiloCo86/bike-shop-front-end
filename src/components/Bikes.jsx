@@ -21,7 +21,7 @@ const Bikes = ({evaluator}) => {
   
     useEffect(()=>{
         let url = API
-        console.log(evaluator)
+        
         if(evaluator=='new'){
             url= API + '/new'
             setTitle('New Bikes')
@@ -43,24 +43,24 @@ const Bikes = ({evaluator}) => {
     
 
     const handleSort = (e)=>{
-        const sortBikes = [...newBikes]
+        const sortBikes = [...showBikes]
     
         switch(e.target.value){
             case "low":
-                setNewBikes(sortBikes.sort((a,b)=>a.price -b.price))
+                setShowBikes(sortBikes.sort((a,b)=>a.price -b.price))
                 break;
             case "high":
-                setNewBikes(sortBikes.sort((a,b)=>b.price -a.price))
+                setShowBikes(sortBikes.sort((a,b)=>b.price -a.price))
                 break;
             case "make":
-                setNewBikes(sortBikes.sort((a,b)=>{
+                setShowBikes(sortBikes.sort((a,b)=>{
                     if(a.make < b.make) { return -1; }
                     if(a.make > b.make) { return 1; }
                     return 0;
                 }))
                 break;
             case "type":
-                setNewBikes(sortBikes.sort((a,b)=>{
+                setShowBikes(sortBikes.sort((a,b)=>{
                     if(a.bike_type < b.bike_type) { return -1; }
                     if(a.bike_type > b.bike_type) { return 1; }
                     return 0;
