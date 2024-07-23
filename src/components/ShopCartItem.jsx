@@ -40,6 +40,8 @@ const ShopCartItem = ({shopItem}) => {
                 .then(res => {
                   if(res.error){
                     alert(res.error)
+                  }else{
+                    
                   }
                 })
                 .catch(err => console.error(err))
@@ -48,13 +50,17 @@ const ShopCartItem = ({shopItem}) => {
     }
 
     const handleDelete = () => {
-        fetch(`${API}/${shopItem.txn_id}`, {
-          method: 'DELETE',
-        })
-        .then(res => res.json())
-        .then(res => navigate('/shopcart'))
-        .catch(err => console.error(err))
-      };
+      if(window.confirm('Are you sure you want to delete?')){
+          fetch(`${API}/${shopItem.txn_id}`, {
+              method: 'DELETE',
+            })
+          .then(res => res.json())
+          .then(res => {
+            window.location.reload()
+          })
+          .catch(err => console.error(err))   
+      }
+    };
     
 
   return (
